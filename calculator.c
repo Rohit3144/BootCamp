@@ -7,12 +7,13 @@ enum calculator
     mul,
     divi
 };
+
 int sum(int, int);
 int sub(int, int);
-int multi(int, int);
+int multiply(int, int);
 float div(int, int);
 
-float main()
+int main()
 {
     printf("Hello World\n");
     int a, b, result;
@@ -20,14 +21,14 @@ float main()
     scanf("%d", &a);
     printf("Enter second number\n");
     scanf("%d", &b);
-    printf("For add press 1\n For sub press 2\n For mul press 3\n For Div press 4\n");
+    printf(" For add press 1\n For sub press 2\n For mul press 3\n For Div press 4\n");
     scanf("%d", &result);
 
     // Addition
     if(result == add)
     {
-    int mysum = sum(a, b);
-    printf("mysum = %d\n", mysum);
+        int mysum = sum(a, b);
+        printf("mysum = %d\n", mysum);
     }
 
     //Subtraction
@@ -40,23 +41,22 @@ float main()
     // Multiplication
     else if(result == mul)
     {
-    int mymul = multi(a, b);
-    printf("mymul = %d\n", mymul);
+        int mymul = multiply(a, b);
+        printf("mymul = %d\n", mymul);
     }
 
     // Division
     else if(result ==divi)
     {
-    if(b==0)
-    {
-        printf("Invalid input\n");
-   
-    }    
-    else
-    {
-    float mydiv = div(a, b);
-    printf("mydiv = %f\n", mydiv);
-    }
+        if(b==0)
+        {
+            printf("Invalid input\n"); 
+        }    
+        else
+        {
+            float mydiv = div(a, b);
+            printf("mydiv = %f\n", mydiv);
+        }
     }
     else
     {
@@ -64,5 +64,5 @@ float main()
     }
 
     return 0;
-}
 
+}
