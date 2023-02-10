@@ -3,13 +3,16 @@
 int main()
 {
     int row, col, i, j;
-    printf("Enter the number of rows " );
-    scanf("%d", &row);
-    printf("Enter the number of columns " );
-    scanf("%d", &col);
-    int a[row][col], b[row][col], sum[row][col];
-    printf("Enter the elements of a");
-    for(i=0; i<row; i++)
+
+        printf("Enter the number of rows\n " );
+        scanf("%d", &row);
+        printf("Enter the number of columns\n " );
+        scanf("%d", &col);
+    if(row>=1 && col >= 1)
+    {
+        int a[row][col], b[row][col], sum[row][col];
+        printf("Enter the elements of a");
+        for(i=0; i<row; i++)
     {
         for(j=0; j<col; j++)
         {
@@ -43,6 +46,12 @@ int main()
             printf("%d\t",sum[i][j]);
         }
         printf("\n");
+    }
+    }
+    else
+    {
+        printf("Invalid Input\n");
+        printf("Please give positive numbers only\n");
     }
 
     return 0;
