@@ -14,7 +14,7 @@ int main(int argc, char const* argv[])
     struct sockaddr_in serv_addr;
     char ip_addr_str[INET_ADDRSTRLEN];
     char buffer[1024] = { 0 };
-    char* hello = "Hello message from Prashant Patel";
+    char* hello = "Hello message from Rohit";
 
     printf("==> Create the socket descriptor for SOCK_STREAM <==\n");
     if((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -45,7 +45,7 @@ int main(int argc, char const* argv[])
     	return -1;
     }
 
-    printf("==> Send 'Hello message from client' to Server <==\n");
+    printf("==> Send 'Hello message from Rohit' to Server <==\n");
     send(sock, hello, strlen(hello), 0);
     printf("==> Going to Receiving message from Server <==\n");
     valread = read(sock, buffer, 1024);

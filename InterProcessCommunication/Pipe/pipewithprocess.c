@@ -26,3 +26,4 @@ int main() {
       printf("Parent Process - Writing to pipe - Message 2 is %s\n", writemessages[1]);
       write(pipefds[1], writemessages[1], sizeof(writemessages[1]));
    }
+}
